@@ -7,7 +7,7 @@ befire_install:
   - docker build -t edskrnd80/react-test -f ./client/Dockerfile.dev ./client
 
 script:
-  - docker run edskrnd80/react-test npm test -- --coverage
+  - docker run edskrnd80/react-test npm test
 
 after_success:
   - docker build -t edskrnd80/multi-client ./client
